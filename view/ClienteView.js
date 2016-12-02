@@ -5,9 +5,10 @@ var ClienteView = Backbone.View.extend({
     },
 
     salvar: function salvar(){
-        alert("Chegou aqui");
-        console.log(this.model);
+        this.model.set("nome", $('#nomeCliente').val());
+        this.model.set("sobrenome", $('#sobrenomeCliente').val());
+        this.model.set("idade", $('#idadeCliente').val());
+        this.model.save();
     }
-
 });
 var clienteView = new ClienteView({el:this.$('#dados'), model: new ClienteModel()});

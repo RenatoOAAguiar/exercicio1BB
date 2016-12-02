@@ -1,17 +1,15 @@
 var ClienteModel = Backbone.Model.extend({
 
-    urlRoot : '/',
+    urlRoot : 'http://localhost:8080/ResteExemplo-Web/cliente',
 
     defaults : {
-        id: 0,
         nome: '',
-        sobrenome: ''
-    	
+        sobrenome: '',
+        idade : 0
     },
     
 });
 
 var ClienteModelCollection = Backbone.Collection.extend({
-    url: '/',
     model: ClienteModel    
 });
